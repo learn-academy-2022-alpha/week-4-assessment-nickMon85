@@ -12,6 +12,19 @@ num3 = 221
 
 
 
+def  some (num)
+    if num %2==0 then
+        p "#{num} is even"
+    else
+        p "#{num} is odd"
+    end
+end
+some num1
+some num2
+some num3
+
+# works Great
+
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
 
 album1 = 'Rubber Soul'
@@ -20,6 +33,14 @@ album2 = 'Sgt Pepper'
 # Expected output: 'Sgt Pppr'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
+
+def remove_vowel(str)
+    result = str.delete 'aeiouAEIOU'
+    puts result
+end
+remove_vowel album1
+remove_vowel album2
+remove_vowel album3
 
 
 
@@ -31,3 +52,18 @@ is_palindrome2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 is_palindrome3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+
+def check_palindromic(variable)
+    variable.downcase!
+    
+    if variable.reverse == variable #Check if string same when reversed 
+      puts "#{ variable } is a palindrome."
+    else # If string is not the same when reversed
+      puts "#{ variable } is not a palindrome."
+    end
+  end
+
+check_palindromic is_palindrome1
+check_palindromic is_palindrome2
+check_palindromic is_palindrome3 
