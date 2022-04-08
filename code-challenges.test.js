@@ -40,12 +40,26 @@ describe('arrayContaining', () => {
 
   })
 })
+ // FAIL  ./code-challenges.test.js
+//   ● Test suite failed to run
+// FAIL  ./code-challenges.test.js
+//   arrayContaining
+//     ✕ matches even if received contains additional elements (1 ms)
 
+//   ● arrayContaining › matches even if received contains additional elements
+
+//     ReferenceError: arrayContaining is not defined
+
+//1. create a test
+//2. write a function
+//3.removes first item from array
+//4.randomly shuffles the reast
 
 
 const arrayContaining = (arr)=>{
+    //3.removes first item from array
     var newColors= arr.shift();
-
+    //4.randomly shuffles the reast
     arr.sort(()=>.5- Math.random());
     return arr
 
@@ -73,8 +87,25 @@ it("takes an array of numbers and returns an array of the minimum and maximum nu
     expect(minMaxnum(nums1)).toEqual([-8, 90])
     expect(minMaxnum(nums2)).toEqual([5, 109])
   })
-})
+//  FAIL  ./code-challenges.test.js
+//   ● Test suite failed to run
+// FAIL  ./code-challenges.test.js
+//   minMaxnum
+//     ✕ matches even if received contains additional elements (1 ms)
 
+//   ● minMaxnum › matches even if received contains additional elements
+
+//     ReferenceError: minMaxnum is not defined})
+
+
+
+
+
+//1.make function 
+//2.I wanted to sort array from numerically
+//3.I wanted to take the first index of array and save in a variable
+//4.I wanted to save the last variable into a variable 
+//5. I tried to create a new variable that held the first 2 variables in concatted form.
 //
 const minMaxnum =(arr)=>{
     arr.sort()
@@ -97,6 +128,10 @@ const minMaxnum =(arr)=>{
 
 // a) Create a test with an expect statement using the variables provided.
 
+// ● Test suite failed to run
+// FAIL  ./code-challenges.test.js
+//   newDoublearr
+
 describe('newDoublearr', () => {
   it('takes in two arrays as arguments and returns one array with no duplicate values.', () => {
     const testArray1 = [3, 7, 10, 5, 4, 3, 3]
@@ -106,11 +141,14 @@ describe('newDoublearr', () => {
   })
 })
 
+//create function
+//2. takes 2 arguments arr1,arr2
 
 const newDoublearr = (arr1,arr2)=>{
     var newArr= arr1.concat(arr2)
-    // remove all duplicates:
+    // 3.remove all duplicates:
     var unique =newArr.filter(function(item,index){
+      //4.returns filtered array !!
         return newArr.indexOf(item)=== index
     })
     return unique
